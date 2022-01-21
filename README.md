@@ -42,6 +42,6 @@ Esta método permite la actualización de un registro en la base de datos recibi
 ```sh
 http://localhost:8081/app/api/personas/ ${dni}
 ```
-Esta método permite la actualización de un registro en la base de datos recibiendo como parametro el dni
+Esta método permite la eliminación de un registro en la base de datos recibiendo como parametro el dni
 
 
