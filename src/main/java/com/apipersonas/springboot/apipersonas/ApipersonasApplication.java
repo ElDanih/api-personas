@@ -24,14 +24,13 @@ public class ApipersonasApplication implements CommandLineRunner {
 		this.personaInterface = personaInterface;
 	}
 
-	private void guardarPersona(){
+	private void fillPersona(){
 		List<Persona> listPersonasTest = new ArrayList<>();
 		Persona persona1 = new Persona();
 		persona1.setDni(1);
 		persona1.setNombre("Daniel");
 		persona1.setApellido("Calderon");
 		persona1.setEmpleado(true);
-		//personaInterface.save(persona1);
 		listPersonasTest.add(persona1);
 
 		Persona persona2 = new Persona();
@@ -40,7 +39,6 @@ public class ApipersonasApplication implements CommandLineRunner {
 		persona2.setApellido("Olarte");
 		persona2.setEmpleado(false);
 		listPersonasTest.add(persona2);
-		//personaInterface.save(persona);
 
 		Persona persona3 = new Persona();
 		persona3.setDni(3);
@@ -50,11 +48,11 @@ public class ApipersonasApplication implements CommandLineRunner {
 		listPersonasTest.add(persona3);
 
 		personaInterface.saveAll(listPersonasTest);
-		System.out.println("Probando findAll ->  " + personaInterface.findAll().size());
+		System.out.println("findAll.size ->  " + personaInterface.findAll().size());
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		guardarPersona();
+		fillPersona();
 	}
 }
